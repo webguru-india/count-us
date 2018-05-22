@@ -1,0 +1,59 @@
+// Here you can add other styles
+
+@mixin transition-mixin($property: all, $duration: 300ms, $anim-type: ease-in-out) {
+  -webkit-transition: $property $duration $anim-type;
+  -moz-transition: $property $duration $anim-type;
+  -o-transition: $property $duration $anim-type;
+  -ms-transition: $property $duration $anim-type;
+  transition: $property $duration $anim-type;
+}
+
+.img-responsive {
+  width: 100%;
+}
+
+html body .app.flex-row.align-items-center.login-page {
+  min-height: 100vh;
+  height: auto;
+}
+
+.text-white {
+  .text-unmuted {
+    color: rgba(255, 255, 255, 1) !important;
+  }
+}
+
+.success-error-alert {
+  position: fixed;
+  right: -100%;
+  bottom: 15px;
+  @include transition-mixin();
+  max-width: 500px;
+  margin-left: 15px;
+
+  &.show-notification {
+    right: 15px;
+  }
+}
+
+input.invalid, input.invalid:focus {
+  border-color: #f00;
+}
+
+.login-page {
+  .nav-tabs {
+    .nav-item {
+      width: 50%;
+      text-align: center;
+      font-size: 1.2rem;
+
+      // .nav-link {
+      //   background: $primary;
+
+      //   &.active {
+      //     background: $white;
+      //   }
+      // }
+    }
+  }
+}

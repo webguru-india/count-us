@@ -1,0 +1,6 @@
+{
+  "name": "QrCodeScanner",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./QrCodeScanner.js"
+}
